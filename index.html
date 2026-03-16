@@ -34,18 +34,28 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="glow-bg"></div>
-        <div class="hero-content reveal-on-load">
-            <h1 class="glitch-text" data-text="Tianhu Peng">Tianhu Peng</h1>
-            <h2 class="subtitle">Ph.D. Researcher in Robotics @ UCL</h2>
-            <p class="summary">Focusing on legged robots, reinforcement learning, and sim-to-real transfer. Aspiring entrepreneur with strong industry background at Tencent Robotics X.</p>
-            <div class="hero-actions">
-                <a href="#publications" class="btn btn-primary">View Research</a>
-                <a href="https://scholar.google.com/citations?user=FmHYJhgAAAAJ&hl=zh-CN" target="_blank" class="btn btn-outline" rel="noopener noreferrer">
-                    <i class="fa-brands fa-google"></i> Google Scholar
-                </a>
-                <a href="https://www.linkedin.com/in/tianhu-peng-278732239/" target="_blank" class="btn btn-icon" aria-label="LinkedIn" rel="noopener noreferrer">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
+        <div class="hero-grid reveal-on-load">
+            <div class="hero-content">
+                <h1 class="glitch-text" data-text="Tianhu Peng">Tianhu Peng</h1>
+                <h2 class="subtitle">Ph.D. Researcher in Robotics @ UCL</h2>
+                <p class="summary">Focusing on legged robots, reinforcement learning, and sim-to-real transfer. Aspiring entrepreneur with strong industry background at Tencent Robotics X.</p>
+                <div class="hero-actions">
+                    <a href="#publications" class="btn btn-primary">View Research</a>
+                    <a href="https://scholar.google.com/citations?user=FmHYJhgAAAAJ&hl=zh-CN" target="_blank" class="btn btn-outline" rel="noopener noreferrer">
+                        <i class="fa-brands fa-google"></i> Google Scholar
+                    </a>
+                    <a href="https://www.linkedin.com/in/tianhu-peng-278732239/" target="_blank" class="btn btn-icon" aria-label="LinkedIn" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Photo Placeholder -->
+            <div class="hero-image-container">
+                <div class="image-border">
+                    <!-- 你只需要把一张照片重命名为 profile.jpg 放到这个文件夹里即可自适应显示 -->
+                    <img src="profile.jpg" alt="Tianhu Peng" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80'; this.style.opacity='0.4';">
+                </div>
             </div>
         </div>
     </section>
@@ -115,10 +125,41 @@
         </div>
     </section>
 
-    <!-- Publications Section -->
-    <section id="publications" class="section">
+    <!-- Highlights Section (Photos with Polished Context) -->
+    <section id="highlights" class="section">
         <div class="section-container">
-            <h2 class="section-title reveal"><span>03.</span> Selected Publications</h2>
+            <h2 class="section-title reveal"><span>03.</span> Featured Moments</h2>
+            
+            <div class="gallery-grid">
+                <div class="gallery-card reveal">
+                    <div class="gallery-img-wrapper">
+                        <!-- 用户将第一张图重命名为 nvidia_speech.jpg 即可 -->
+                        <img src="nvidia_speech.jpg" alt="Invited Talk @ Nvidia Robotics Day" onerror="this.src='https://images.unsplash.com/photo-1540575861501-7cf06a877ef7?auto=format&fit=crop&w=800'; this.style.opacity='0.5';">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Invited Talk @ Nvidia Robotics Day</h3>
+                        <p>Presented advanced distillation training methodologies inside **Isaac Lab** for scaling bipedal and humanoid locomotion across complex terrains.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card reveal">
+                    <div class="gallery-img-wrapper">
+                        <!-- 用户将第二张图重命名为 atec_competition.jpg 即可 -->
+                        <img src="atec_competition.jpg" alt="ATEC Humanoid Benchmarking" onerror="this.src='https://images.unsplash.com/photo-1518770662638-05f25fe9f4ce?auto=format&fit=crop&w=800'; this.style.opacity='0.5';">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>ATEC Humanoid Benchmarking (Hong Kong)</h3>
+                        <p>Live field stress-testing on full-scale humanoid kinetics. Solving high-DOF compliance & torque constraints pushes the absolute boundary of legged stability, unlike simpler multi-pedal systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section bg-secondary">
+        <div class="section-container">
+            <h2 class="section-title reveal"><span>04.</span> Selected Publications</h2>
             
             <div class="publications-list">
                 <!-- Pub 1 -->
@@ -146,9 +187,10 @@
                 </a>
 
                 <!-- Pub 3 -->
-                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FmHYJhgAAAAJ&citation_for_view=FmHYJhgAAAAJ:UeHWp8X0CEIC" target="_blank" class="pub-card reveal">
+                <a href="https://ramseypengtianhu.github.io/Gait-conditioned-humanoid-locomotion/" target="_blank" class="pub-card reveal">
                     <div class="pub-content">
                         <div class="pub-meta">
+                            <span class="pub-metrics"><i class="fa-solid fa-star"></i> Project Page</span>
                             <span class="pub-metrics"><i class="fa-solid fa-quote-right"></i> 5 Citations</span>
                         </div>
                         <h3>Gait-Conditioned Reinforcement Learning with Multi-Phase Curriculum for Humanoid Locomotion</h3>
@@ -210,11 +252,15 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section bg-secondary">
+    <section id="contact" class="section">
         <div class="section-container text-center reveal">
-            <h2 class="section-title center"><span>04.</span> Get In Touch</h2>
-            <p class="contact-desc">Whether you have a question about my research, are interested in collaboration, or want to discuss startup opportunities, my inbox is always open.</p>
-            <a href="mailto:tianhu.peng.24@ucl.ac.uk" class="btn btn-primary btn-large">Say Hello</a>
+            <h2 class="section-title center"><span>05.</span> Get In Touch</h2>
+            <p class="contact-desc">Whether you have a question about my research, are interested in collaboration, or want to discuss startup opportunities.</p>
+            
+            <div class="contact-emails">
+                <a href="mailto:tianhu.peng.24@ucl.ac.uk" class="btn btn-primary">Work Email</a>
+                <a href="mailto:pengtianhu@gmail.com" class="btn btn-outline">Personal Email</a>
+            </div>
         </div>
     </section>
 
