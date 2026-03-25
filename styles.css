@@ -551,6 +551,25 @@ h1, h2, h3, h4 {
     line-height: 1.5;
 }
 
+/* Clickable gallery cards (external links) */
+a.gallery-card-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+a.gallery-card-link:hover .gallery-info h3 {
+    color: #fff;
+}
+.gallery-ext-icon {
+    font-size: 0.75rem;
+    opacity: 0.5;
+    margin-left: 6px;
+    transition: opacity var(--transition-fast);
+}
+a.gallery-card-link:hover .gallery-ext-icon {
+    opacity: 1;
+}
+
 /* --- Publications --- */
 .publications-list {
     display: flex;
