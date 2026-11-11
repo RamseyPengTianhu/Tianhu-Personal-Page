@@ -1,0 +1,244 @@
+[
+  {
+    "id": "peng2026aheadance",
+    "title": "AHEADance: Anticipatory Humanoid Dance from Streaming Audio",
+    "authors": [
+      "Tianhu Peng",
+      "Yukun Wang",
+      "Lingfan Bao",
+      "Yiyang Jia",
+      "Chengxu Zhou"
+    ],
+    "year": 2026,
+    "date": "2026-11-09",
+    "type": "preprint",
+    "venue": "Submitted to IEEE Transactions on Robot Learning (T-RL)",
+    "arxiv": "2611.13370",
+    "project": "https://ihcr.github.io/AHEADance/",
+    "video": "https://youtu.be/WqwX6balBUI",
+    "selected": true,
+    "image": "aheadance.jpg",
+    "image_alt": "Physical Unitree G1 humanoids performing dance motions in the AHEADance demonstration",
+    "description": "Anticipatory dance from streaming music, with reliability-weighted audio forecasts and continuation from committed motion."
+  },
+  {
+    "id": "bao2026expressive",
+    "title": "Beyond Kinematic Tracking: Preserving Expressive Characteristics in Humanoid Whole-Body Control",
+    "authors": [
+      "Lingfan Bao",
+      "Hanshang Zhu",
+      "Yan Pan",
+      "Jincheng Wang",
+      "Jingyang Yu",
+      "Tianhu Peng",
+      "Yiyang Jia",
+      "Dimitrios Kanoulas",
+      "Chengxu Zhou"
+    ],
+    "year": 2026,
+    "date": "2026-10-14",
+    "type": "preprint",
+    "venue": "arXiv preprint · Under review",
+    "arxiv": "2610.19393"
+  },
+  {
+    "id": "long2026route",
+    "title": "Reliability-Aware Sparse Route Memory for Round-Trip Vision-Language Navigation",
+    "authors": [
+      "Bojun Long",
+      "Lingfan Bao",
+      "Tianhu Peng",
+      "Jingcheng Sun",
+      "Chengxu Zhou"
+    ],
+    "year": 2026,
+    "date": "2026-09-28",
+    "type": "preprint",
+    "venue": "arXiv preprint",
+    "arxiv": "2609.34163"
+  },
+  {
+    "id": "pan2026pamor",
+    "title": "PAMoR: Parameterized Affective Motion Generation in Real Time for Humanoid Robots",
+    "authors": [
+      "Yan Pan",
+      "Lingfan Bao",
+      "Tianhu Peng",
+      "Chengxu Zhou"
+    ],
+    "year": 2026,
+    "date": "2026-08-28",
+    "type": "preprint",
+    "venue": "arXiv preprint · Under review at IEEE Robotics and Automation Letters",
+    "arxiv": "2608.28213"
+  },
+  {
+    "id": "sun2026digitaltwin",
+    "title": "A High-Fidelity Digital Twin for Robotic Manipulation Based on 3D Gaussian Splatting",
+    "authors": [
+      "Ziyang Sun",
+      "Lingfan Bao",
+      "Tianhu Peng",
+      "Jingcheng Sun",
+      "Chengxu Zhou"
+    ],
+    "year": 2026,
+    "date": "2026-05-13",
+    "type": "article",
+    "venue": "Robot Learning, article 20260013",
+    "journal": "Robot Learning",
+    "article": "20260013",
+    "doi": "10.55092/rl20260013",
+    "arxiv": "2601.03200"
+  },
+  {
+    "id": "ziegltrum2026parkour",
+    "title": "Quadruped Parkour Learning: Sparsely Gated Mixture of Experts with Visual Input",
+    "authors": [
+      "Michael Ziegltrum",
+      "Jianhao Jiao",
+      "Tianhu Peng",
+      "Chengxu Zhou",
+      "Dimitrios Kanoulas"
+    ],
+    "year": 2026,
+    "date": "2026-04-21",
+    "type": "preprint",
+    "venue": "arXiv preprint",
+    "arxiv": "2604.19344"
+  },
+  {
+    "id": "carroll2026scdp",
+    "title": "SCDP: Learning Humanoid Locomotion from Partial Observations via Mixed-Observation Distillation",
+    "authors": [
+      "Milo Carroll",
+      "Tianhu Peng",
+      "Lingfan Bao",
+      "Chengxu Zhou",
+      "Zhibin Li"
+    ],
+    "year": 2026,
+    "date": "2026-03-10",
+    "type": "preprint",
+    "venue": "arXiv preprint",
+    "arxiv": "2603.09574"
+  },
+  {
+    "id": "bao2026survey",
+    "title": "Deep Reinforcement Learning for Robotic Bipedal Locomotion: A Brief Survey",
+    "authors": [
+      "Lingfan Bao",
+      "Joseph Humphreys",
+      "Tianhu Peng",
+      "Chengxu Zhou"
+    ],
+    "year": 2026,
+    "date": "2026-01-01",
+    "type": "article",
+    "venue": "Artificial Intelligence Review, 59, article 38",
+    "journal": "Artificial Intelligence Review",
+    "volume": "59",
+    "article": "38",
+    "doi": "10.1007/s10462-025-11451-z",
+    "arxiv": "2404.17070"
+  },
+  {
+    "id": "bao2025sim2real",
+    "title": "Sim-to-Real Transfer in Deep Reinforcement Learning for Bipedal Locomotion",
+    "authors": [
+      "Lingfan Bao",
+      "Tianhu Peng",
+      "Chengxu Zhou"
+    ],
+    "year": 2025,
+    "date": "2025-11-09",
+    "type": "preprint",
+    "venue": "Book chapter preprint",
+    "arxiv": "2511.06465"
+  },
+  {
+    "id": "peng2025gait",
+    "title": "Gait-Conditioned Reinforcement Learning with Multi-Phase Curriculum for Humanoid Locomotion",
+    "authors": [
+      "Tianhu Peng",
+      "Lingfan Bao",
+      "Chengxu Zhou"
+    ],
+    "year": 2025,
+    "date": "2025-09-01",
+    "type": "inproceedings",
+    "venue": "IEEE-RAS International Conference on Humanoid Robots (Humanoids)",
+    "booktitle": "2025 IEEE-RAS 24th International Conference on Humanoid Robots (Humanoids)",
+    "pages": "1087--1093",
+    "doi": "10.1109/Humanoids65713.2025.11203058",
+    "arxiv": "2505.20619",
+    "project": "https://ramseypengtianhu.github.io/Gait-conditioned-humanoid-locomotion/",
+    "video": "https://www.youtube.com/watch?v=9s9dERubIWA",
+    "selected": true,
+    "image": "gait-conditioned.png",
+    "image_alt": "Overview of standing, walking and running with a gait-conditioned humanoid locomotion policy",
+    "description": "A single recurrent policy for standing, walking, running and smooth gait transitions, trained with a multi-phase curriculum."
+  },
+  {
+    "id": "bao2025intention",
+    "title": "Hierarchical Intention-Aware Expressive Motion Generation for Humanoid Robots",
+    "authors": [
+      "Lingfan Bao",
+      "Yan Pan",
+      "Tianhu Peng",
+      "Dimitrios Kanoulas",
+      "Chengxu Zhou"
+    ],
+    "year": 2025,
+    "date": "2025-06-02",
+    "type": "preprint",
+    "venue": "arXiv preprint",
+    "arxiv": "2506.01563",
+    "video": "https://www.youtube.com/watch?v=_C60tH7mb2I"
+  },
+  {
+    "id": "song2025omnidexter",
+    "title": "OmniDexter: A Modular Tendon-Driven Robotic Wrist with Enhanced Precision and Versatility",
+    "authors": [
+      "Mingxuan Song",
+      "Morgan Zhang",
+      "Anxu Lyu",
+      "Lingfan Bao",
+      "Tianhu Peng",
+      "Chengxu Zhou"
+    ],
+    "year": 2025,
+    "date": "2025-01-01",
+    "type": "inproceedings",
+    "venue": "7th UK Robot Manipulation Workshop",
+    "booktitle": "The 7th UK Robot Manipulation Workshop",
+    "url": "https://discovery.ucl.ac.uk/id/eprint/10211146/"
+  },
+  {
+    "id": "peng2024bipedal",
+    "title": "Learning Bipedal Walking on a Quadruped Robot via Adversarial Motion Priors",
+    "authors": [
+      "Tianhu Peng",
+      "Lingfan Bao",
+      "Joseph Humphreys",
+      "Andromachi Maria Delfaki",
+      "Dimitrios Kanoulas",
+      "Chengxu Zhou"
+    ],
+    "year": 2024,
+    "date": "2024-08-21",
+    "type": "inproceedings",
+    "venue": "Towards Autonomous Robotic Systems (TAROS), pp. 118–129",
+    "booktitle": "Towards Autonomous Robotic Systems (TAROS 2024)",
+    "pages": "118--129",
+    "volume": "15052",
+    "doi": "10.1007/978-3-031-72062-8_11",
+    "arxiv": "2407.02282",
+    "video": "https://www.youtube.com/watch?v=JYD1RlrQRWM",
+    "award": "Best Paper Award",
+    "selected": true,
+    "image": "bipedal-walking.jpg",
+    "image_alt": "Bipedal walking demonstration using a Unitree quadruped robot",
+    "description": "Adversarial motion priors and teacher–student learning for bipedal walking with a quadruped robot."
+  }
+]
