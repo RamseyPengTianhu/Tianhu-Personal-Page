@@ -3,8 +3,26 @@
 from html import escape
 from pathlib import Path
 import json
+import re
+from urllib.parse import parse_qs, urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
+
+
+def youtube_id(url):
+    parsed = urlparse(url)
+    if parsed.hostname == 'youtu.be':
+        video_id = parsed.path.strip('/')
+    elif parsed.hostname in ('youtube.com', 'www.youtube.com', 'www.youtube-nocookie.com'):
+        if parsed.path.startswith(('/embed/', '/shorts/')):
+            video_id = parsed.path.rstrip('/').split('/')[-1]
+        else:
+            video_id = parse_qs(parsed.query).get('v', [''])[0]
+    else:
+        raise ValueError(f'Expected a YouTube video URL: {url}')
+    if not re.fullmatch(r'[A-Za-z0-9_-]{11}', video_id):
+        raise ValueError(f'Invalid YouTube video ID: {url}')
+    return video_id
 
 
 def bibtex(paper):
@@ -27,16 +45,27 @@ def render(paper):
     paper_url = ('https://doi.org/' + paper['doi']) if paper.get('doi') else paper.get('url') or 'https://arxiv.org/abs/' + paper['arxiv']
     selected = 'true' if paper.get('selected') else 'false'
     media = ''
-    if paper.get('image'):
+    video_id = youtube_id(paper['video']) if paper.get('video') else None
+    thumbnail = paper.get('video_thumbnail') or paper.get('image')
+    video_attributes = ''
+    if video_id:
+        video_attributes = f'data-youtube-id="{video_id}" data-video-title="{escape(paper["title"])}" aria-label="Play video: {escape(paper["title"])}"'
+    if thumbnail and video_id:
+        media = f'''<a class="publication-media publication-video" href="{escape(paper['video'])}" {video_attributes}>
+    <img src="{escape(thumbnail)}" alt="" width="480" height="270" loading="lazy" decoding="async">
+    <span class="video-play" aria-hidden="true"></span><span class="video-label" aria-hidden="true">Play video</span>
+  </a>'''
+    elif paper.get('image'):
         target = paper.get('project') or paper.get('video') or paper_url
         media = f'<a class="publication-media" href="{escape(target)}" aria-label="View the {escape(paper["title"])} project"><img src="{escape(paper["image"])}" alt="{escape(paper["image_alt"])}" width="480" height="270" loading="lazy"></a>'
     authors = ', '.join('<strong>Tianhu Peng</strong>' if author == 'Tianhu Peng' else escape(author) for author in paper['authors'])
     links = [f'<a href="{escape(paper_url)}">Paper</a>']
     if paper.get('doi') and paper.get('arxiv'):
         links.append(f'<a href="https://arxiv.org/abs/{paper["arxiv"]}">arXiv</a>')
-    for key, label in [('project', 'Project'), ('video', 'Video')]:
-        if paper.get(key):
-            links.append(f'<a href="{escape(paper[key])}">{label}</a>')
+    if paper.get('project'):
+        links.append(f'<a href="{escape(paper["project"])}">Project</a>')
+    if video_id:
+        links.append(f'<a class="video-link" href="{escape(paper["video"])}" {video_attributes}><span aria-hidden="true">▶</span> YouTube</a>')
     abstract = f'<p class="publication-summary">{escape(paper["description"])}</p>' if paper.get('description') else ''
     badge = '<span class="new-label">New submission</span>' if paper['id'] == 'peng2026aheadance' else ''
     award = f'<span class="award">{escape(paper["award"])}</span>' if paper.get('award') else ''

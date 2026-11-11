@@ -15,11 +15,12 @@
     "venue": "Submitted to IEEE Transactions on Robot Learning (T-RL)",
     "arxiv": "2611.13370",
     "project": "https://ihcr.github.io/AHEADance/",
-    "video": "https://youtu.be/WqwX6balBUI",
+    "video": "https://www.youtube.com/watch?v=WqwX6balBUI",
     "selected": true,
     "image": "aheadance.jpg",
     "image_alt": "Physical Unitree G1 humanoids performing dance motions in the AHEADance demonstration",
-    "description": "Anticipatory dance from streaming music, with reliability-weighted audio forecasts and continuation from committed motion."
+    "description": "Anticipatory dance from streaming music, with reliability-weighted audio forecasts and continuation from committed motion.",
+    "video_thumbnail": "images/videos/aheadance.jpg"
   },
   {
     "id": "bao2026expressive",
@@ -39,7 +40,9 @@
     "date": "2026-10-14",
     "type": "preprint",
     "venue": "arXiv preprint · Under review",
-    "arxiv": "2610.19393"
+    "arxiv": "2610.19393",
+    "video": "https://www.youtube.com/watch?v=5EmDvZdKiBY",
+    "video_thumbnail": "images/videos/expressive-tracking.jpg"
   },
   {
     "id": "long2026route",
@@ -70,7 +73,9 @@
     "date": "2026-08-28",
     "type": "preprint",
     "venue": "arXiv preprint · Under review at IEEE Robotics and Automation Letters",
-    "arxiv": "2608.28213"
+    "arxiv": "2608.28213",
+    "video": "https://www.youtube.com/watch?v=W6KaKbS3v_8",
+    "video_thumbnail": "images/videos/pamor.jpg"
   },
   {
     "id": "sun2026digitaltwin",
@@ -177,7 +182,8 @@
     "selected": true,
     "image": "gait-conditioned.png",
     "image_alt": "Overview of standing, walking and running with a gait-conditioned humanoid locomotion policy",
-    "description": "A single recurrent policy for standing, walking, running and smooth gait transitions, trained with a multi-phase curriculum."
+    "description": "A single recurrent policy for standing, walking, running and smooth gait transitions, trained with a multi-phase curriculum.",
+    "video_thumbnail": "images/videos/gait-conditioned.jpg"
   },
   {
     "id": "bao2025intention",
@@ -194,7 +200,8 @@
     "type": "preprint",
     "venue": "arXiv preprint",
     "arxiv": "2506.01563",
-    "video": "https://www.youtube.com/watch?v=_C60tH7mb2I"
+    "video": "https://www.youtube.com/watch?v=_C60tH7mb2I",
+    "video_thumbnail": "images/videos/intention-aware.jpg"
   },
   {
     "id": "song2025omnidexter",
@@ -239,6 +246,7 @@
     "selected": true,
     "image": "bipedal-walking.jpg",
     "image_alt": "Bipedal walking demonstration using a Unitree quadruped robot",
-    "description": "Adversarial motion priors and teacher–student learning for bipedal walking with a quadruped robot."
+    "description": "Adversarial motion priors and teacher–student learning for bipedal walking with a quadruped robot.",
+    "video_thumbnail": "images/videos/bipedal-walking.jpg"
   }
 ]

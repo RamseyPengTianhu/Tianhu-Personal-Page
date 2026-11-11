@@ -13,6 +13,10 @@ text and resource links remain available without JavaScript.
   Set `selected: true` to include a paper in the selected-work filter. Keep
   submission status distinct from publication venue: AHEADance is submitted to
   IEEE Transactions on Robot Learning (T-RL).
+- Set `video` to a verified YouTube URL and `video_thumbnail` to its local preview
+  image (under `images/videos/`). Clicking the thumbnail or YouTube link opens
+  an accessible video dialog; the player loads only on request and stops when
+  closed. Without JavaScript, the same links open YouTube directly.
 - Replace `files/Tianhu_Peng_CV.pdf` (3-page academic CV) and
   `files/Tianhu_Peng_CV_Industry.pdf` (2-page industry CV) with the matching
   compiled PDFs from the CV repository. The navigation's CV link leads to the
@@ -33,8 +37,9 @@ existing GitHub Pages configuration and `main` branch.
 python3 -m http.server 8000
 ```
 
-Open http://localhost:8000. Check desktop/mobile layouts, the selected-work filter,
-BibTeX expansion/copy, local images and the CV PDF before publishing.
+Open http://localhost:8000. Check desktop/mobile layouts, video playback and
+closing (including Escape), the selected-work filter, BibTeX expansion/copy,
+local images and both CV PDFs before publishing.
 
 The layout takes inspiration from conventional academic homepages and Lingfan
 Bao's site, with an author sidebar and bibliographic publication entries. Content

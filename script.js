@@ -1,4 +1,51 @@
 (() => {
+  const videoDialog = document.getElementById('video-dialog');
+  if (videoDialog && typeof videoDialog.showModal === 'function') {
+    const player = document.getElementById('video-player');
+    const title = document.getElementById('video-dialog-title');
+    const youtubeLink = document.getElementById('video-youtube-link');
+    const closeButton = videoDialog.querySelector('.video-close');
+    let videoTrigger = null;
+
+    document.querySelectorAll('a[data-youtube-id]').forEach(link => {
+      link.setAttribute('aria-haspopup', 'dialog');
+    });
+    document.addEventListener('click', event => {
+      const link = event.target.closest('a[data-youtube-id]');
+      if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      const id = link.dataset.youtubeId;
+      if (!/^[A-Za-z0-9_-]{11}$/.test(id)) return;
+      event.preventDefault();
+      videoTrigger = link;
+      title.textContent = link.dataset.videoTitle;
+      youtubeLink.href = `https://www.youtube.com/watch?v=${id}`;
+      const iframe = document.createElement('iframe');
+      const url = new URL(`https://www.youtube-nocookie.com/embed/${id}`);
+      url.search = new URLSearchParams({ autoplay: '1', rel: '0', playsinline: '1', origin: window.location.origin });
+      iframe.src = url.href;
+      iframe.title = link.dataset.videoTitle;
+      iframe.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      iframe.allowFullscreen = true;
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      player.replaceChildren(iframe);
+      videoDialog.showModal();
+      document.body.classList.add('video-open');
+      closeButton.focus();
+    });
+    closeButton.addEventListener('click', () => videoDialog.close());
+    youtubeLink.addEventListener('click', () => videoDialog.close());
+    videoDialog.addEventListener('click', event => {
+      if (event.target !== videoDialog) return;
+      const box = videoDialog.getBoundingClientRect();
+      if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) videoDialog.close();
+    });
+    videoDialog.addEventListener('close', () => {
+      player.replaceChildren();
+      document.body.classList.remove('video-open');
+      if (videoTrigger && videoTrigger.isConnected) videoTrigger.focus({ preventScroll: true });
+    });
+  }
+
   const controls = document.querySelector('.publication-tools');
   const years = [...document.querySelectorAll('.publication-year')];
   if (controls) {
