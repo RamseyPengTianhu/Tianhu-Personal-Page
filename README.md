@@ -13,7 +13,10 @@ text and resource links remain available without JavaScript.
   Set `selected: true` to include a paper in the selected-work filter. Keep
   submission status distinct from publication venue: AHEADance is submitted to
   IEEE Transactions on Robot Learning (T-RL).
-- Replace `files/Tianhu_Peng_CV.pdf` with the compiled CV from the CV repository.
+- Replace `files/Tianhu_Peng_CV.pdf` (3-page academic CV) and
+  `files/Tianhu_Peng_CV_Industry.pdf` (2-page industry CV) with the matching
+  compiled PDFs from the CV repository. The navigation's CV link leads to the
+  two download options. Update page-count labels if the documents change length.
 
 Render the page and downloadable bibliography after editing:
 

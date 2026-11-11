@@ -101,6 +101,11 @@ main { min-width: 0; }
 .experience-item time { color: var(--muted); font-size: 12px; padding-top: 2px; font-variant-numeric: tabular-nums; }
 .experience-item h3 { font-size: 14px; font-weight: 600; margin: 0 0 3px; }
 .experience-item p { margin: 0; font-size: 13px; color: #646e78; line-height: 1.65; }
+.cv-downloads { list-style: none; padding: 0; margin: 0; display: grid; gap: 18px; }
+.cv-downloads li { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 3px 14px; }
+.cv-downloads a { font-size: 14px; font-weight: 600; }
+.cv-downloads li > span { font-size: 11px; color: var(--muted); align-self: center; }
+.cv-downloads p { grid-column: 1 / -1; font-size: 13px; line-height: 1.7; color: var(--muted); margin: 0; }
 .activity-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 21px; margin-bottom: 22px; }
 figure { margin: 0; }
 .activity-grid img { width: 100%; height: 155px; object-fit: cover; border-radius: 3px; }
